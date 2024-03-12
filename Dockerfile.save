@@ -1,3 +1,0 @@
-FROM openjdk:8-jre-alpine
-WORKDIR /app/ski-devops
-COPY target/*.jar  app.jar
