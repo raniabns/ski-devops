@@ -109,7 +109,7 @@ function menuItem(options) {
   }
   const tag = itemOptions.type === "link" ? "a" : "button";
   const item = createElementFromHtml(`
-      <${tag} class="jenkins-dropdown__item" href="${itemOptions.url}">
+      <${tag} class="jenkins-dropdown__item ${itemOptions.clazz ? xmlEscape(itemOptions.clazz) : ""}" ${itemOptions.url ? `href="${xmlEscape(itemOptions.url)}"` : ""} ${itemOptions.id ? `id="${xmlEscape(itemOptions.id)}"` : ""}>
           ${itemOptions.icon ? `<div class="jenkins-dropdown__item__icon">${itemOptions.iconXml ? itemOptions.iconXml : `<img alt="${label}" src="${itemOptions.icon}" />`}</div>` : ``}
           ${label}
                     ${itemOptions.badge != null ? `<span class="jenkins-dropdown__item__badge jenkins-badge alert-${badgeSeverity}" tooltip="${badgeTooltip}">${badgeText}</span>` : ``}
@@ -254,9 +254,6 @@ function generateDropdown(element, callback) {
         });
         callback(instance);
       });
-    },
-    onShown(instance) {
-      behavior_shim.applySubtree(instance.popper);
     }
   }));
 }
@@ -271,6 +268,9 @@ function generateDropdownItems(items, compact) {
     menuItems.classList.add("jenkins-dropdown--compact");
   }
   items.map(item => {
+    if (item.type === "CUSTOM") {
+      return item.contents;
+    }
     if (item.type === "HEADER") {
       return templates.heading(item.label);
     }
@@ -326,7 +326,62 @@ function generateDropdownItems(items, compact) {
   behavior_shim.applySubtree(menuItems);
   return menuItems;
 }
+function convertHtmlToItems(children) {
+  const items = [];
+  Array.from(children).forEach(child => {
+    const attributes = child.dataset;
+    const type = child.dataset.dropdownType;
+    switch (type) {
+      case "ITEM":
+        {
+          const item = {
+            label: attributes.dropdownText,
+            id: attributes.dropdownId,
+            icon: attributes.dropdownIcon,
+            iconXml: attributes.dropdownIcon,
+            clazz: attributes.dropdownClazz
+          };
+          if (attributes.dropdownHref) {
+            item.url = attributes.dropdownHref;
+            item.type = "link";
+          } else {
+            item.type = "button";
+          }
+          items.push(item);
+          break;
+        }
+      case "SUBMENU":
+        items.push({
+          type: "ITEM",
+          label: attributes.dropdownText,
+          icon: attributes.dropdownIcon,
+          iconXml: attributes.dropdownIcon,
+          subMenu: () => convertHtmlToItems(child.content.children)
+        });
+        break;
+      case "SEPARATOR":
+        items.push({
+          type: type
+        });
+        break;
+      case "HEADER":
+        items.push({
+          type: type,
+          label: attributes.dropdownText
+        });
+        break;
+      case "CUSTOM":
+        items.push({
+          type: type,
+          contents: child.content.cloneNode(true)
+        });
+        break;
+    }
+  });
+  return items;
+}
 /* harmony default export */ var utils = ({
+  convertHtmlToItems,
   generateDropdown,
   generateDropdownItems
 });
@@ -462,7 +517,9 @@ function inpage_jumplist_init() {
 function overflow_button_init() {
   behavior_shim.specify("[data-dropdown='true']", "-dropdown-", 1000, element => {
     utils.generateDropdown(element, instance => {
-      instance.setContent(element.nextElementSibling.content);
+      const elements = element.nextElementSibling.content.children[0].children;
+      const mappedItems = utils.convertHtmlToItems(elements);
+      instance.setContent(utils.generateDropdownItems(mappedItems));
     });
   });
 }

@@ -15,16 +15,8 @@
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@3883.vb_3ff2a_e3eea_f">
     <script>pipeline {
    agent {label &apos;agent1&apos;}
-
     stages {
-        stage(&apos;CHECKOUT&apos;) {
-            steps {
-               echo &quot;Getting Project from Git&quot;; 
-                git branch: &quot;main&quot;, 
-                    url: &quot;https://github.com/raniabns/ski-devops.git&quot;
-                    //credentialsId: &quot;git-jenkins-credentials&quot;; 
-            }
-        }
+        
          stage(&apos;Build Artifact&apos;) {
             steps {
                 sh &apos;mvn package -DskipTests&apos;
