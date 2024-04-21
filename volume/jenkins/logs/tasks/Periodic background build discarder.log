@@ -1,4 +1,4 @@
-Started at Sat Apr 13 09:11:20 UTC 2024
+Started at Thu Apr 18 22:41:14 UTC 2024
 Processing pipeline avec agent
 Offering pipeline avec agent to Project Build Discarder
 Processing pipeline sans agent
@@ -7,24 +7,4 @@ Processing Pipeline SonarCloud
 Offering Pipeline SonarCloud to Project Build Discarder
 Processing SkiStation
 Offering SkiStation to Project Build Discarder
-Finished at Sat Apr 13 09:11:20 UTC 2024. 103ms
-Started at Sat Apr 13 12:14:56 UTC 2024
-Processing pipeline avec agent
-Offering pipeline avec agent to Project Build Discarder
-Processing pipeline sans agent
-Offering pipeline sans agent to Project Build Discarder
-Processing Pipeline SonarCloud
-Offering Pipeline SonarCloud to Project Build Discarder
-Processing SkiStation
-Offering SkiStation to Project Build Discarder
-Finished at Sat Apr 13 12:14:56 UTC 2024. 4ms
-Started at Sat Apr 13 13:14:56 UTC 2024
-Processing pipeline avec agent
-Offering pipeline avec agent to Project Build Discarder
-Processing pipeline sans agent
-Offering pipeline sans agent to Project Build Discarder
-Processing Pipeline SonarCloud
-Offering Pipeline SonarCloud to Project Build Discarder
-Processing SkiStation
-Offering SkiStation to Project Build Discarder
-Finished at Sat Apr 13 13:14:56 UTC 2024. 4ms
+Finished at Thu Apr 18 22:41:14 UTC 2024. 14ms
