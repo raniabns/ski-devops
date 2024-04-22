@@ -16,6 +16,14 @@
     <script>pipeline {
    agent {label &apos;agent1&apos;}
     stages {
+        stage(&apos;CHECKOUT&apos;) {
+            steps {
+               echo &quot;Getting Project from Git&quot;; 
+                git branch: &quot;main&quot;, 
+                    url: &quot;https://github.com/raniabns/ski-devops.git&quot;
+                    //credentialsId: &quot;git-jenkins-credentials&quot;; 
+            }
+        }
         
          stage(&apos;Build Artifact&apos;) {
             steps {
@@ -24,13 +32,13 @@
                 
             }
         }
-         stage(&apos;Build Docker image&apos;) {
+         /*stage(&apos;Build Docker image&apos;) {
             steps {
-                sh &apos;docker build -app-container .&apos;
+                sh &apos;docker build -t app-container .&apos;
                
                 
             }
-        }
+        }*/
         
         stage(&apos;SonarCloud analysis&apos;) {
             steps {
