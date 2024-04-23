@@ -12,16 +12,16 @@
       </causeBag>
     </hudson.model.CauseAction>
     <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@4.2.21-449.v6960d7c54c69">
-      <queuingDurationMillis>4</queuingDurationMillis>
+      <queuingDurationMillis>1</queuingDurationMillis>
       <blockedDurationMillis>0</blockedDurationMillis>
       <buildableDurationMillis>0</buildableDurationMillis>
-      <waitingDurationMillis>1</waitingDurationMillis>
+      <waitingDurationMillis>0</waitingDurationMillis>
     </jenkins.metrics.impl.TimeInQueueAction>
     <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@704.vc58b_8890a_384">
       <libraries/>
     </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
     <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2184.v0b_358b_953e69">
-      <stagesUUID>cde43f00-396e-406a-97e1-8db0314a104c</stagesUUID>
+      <stagesUUID>916163f5-5765-4684-9253-99ac8215a133</stagesUUID>
       <pipelineDefs>
         <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2198.v41dd8ef6dd56">
           <stages>
@@ -75,6 +75,32 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>SonarQube analysis</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">sh &apos;mvn clean&apos;
+                    sh &apos;mvn compile sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=Ski-Station Devops -Dsonar.login=16aadcafad9e921cf0c36411e78a98c02a03777a&apos;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
                 <name>Build Artifact</name>
                 <branches>
                   <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
@@ -100,7 +126,7 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
-                <name>SonarCloud analysis</name>
+                <name>deploy Artifact</name>
                 <branches>
                   <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
                     <name>default</name>
@@ -114,7 +140,7 @@
                                 <key>script</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="string">mvn verify sonar:sonar -Dsonar.organization=ski-station-devops -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=16aadcafad9e921cf0c36411e78a98c02a03777a</value>
+                                <value class="string">mvn deploy -DskipTests</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
                           </arguments>
@@ -124,9 +150,77 @@
                   </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Build Docker image</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">sh &apos;docker build -t app-container .&apos;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Run Docker image</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">sh &apos;docker-compose up -d&apos;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
             </stages>
-            <uuid>cde43f00-396e-406a-97e1-8db0314a104c</uuid>
+            <uuid>916163f5-5765-4684-9253-99ac8215a133</uuid>
           </stages>
+          <postBuild>
+            <conditions>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                <condition>always</condition>
+                <branch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <name>cleanWs</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map"/>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  </steps>
+                </branch>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+            </conditions>
+          </postBuild>
           <agent>
             <variables class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
               <value class="string">agent1</value>
@@ -139,25 +233,26 @@
       </pipelineDefs>
     </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
     <jenkins.metrics.impl.SubTaskTimeInQueueAction plugin="metrics@4.2.21-449.v6960d7c54c69">
-      <queuingDurationMillis>3</queuingDurationMillis>
+      <queuingDurationMillis>4</queuingDurationMillis>
       <blockedDurationMillis>0</blockedDurationMillis>
-      <buildableDurationMillis>2</buildableDurationMillis>
+      <buildableDurationMillis>3</buildableDurationMillis>
       <waitingDurationMillis>0</waitingDurationMillis>
-      <executingDurationMillis>63737</executingDurationMillis>
+      <executingDurationMillis>52205</executingDurationMillis>
       <workUnitCount>1</workUnitCount>
     </jenkins.metrics.impl.SubTaskTimeInQueueAction>
   </actions>
-  <queueId>11</queueId>
-  <timestamp>1713738649485</timestamp>
-  <startTime>1713738649498</startTime>
+  <queueId>5</queueId>
+  <timestamp>1713816698994</timestamp>
+  <startTime>1713816699004</startTime>
   <result>FAILURE</result>
-  <duration>63999</duration>
+  <duration>52479</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
     <result>FAILURE</result>
-    <script>pipeline {
-   agent {label &apos;agent1&apos;}
+    <script>
+pipeline {
+    agent { label &apos;agent1&apos; }
     stages {
         stage(&apos;CHECKOUT&apos;) {
             steps {
@@ -167,63 +262,72 @@
                     //credentialsId: &quot;git-jenkins-credentials&quot;; 
             }
         }
-        
-         stage(&apos;Build Artifact&apos;) {
+       stage(&apos;SonarQube analysis&apos;) {
             steps {
-                sh &apos;mvn package -DskipTests&apos;
-               
-                
+                script {
+		   sh &apos;mvn clean&apos;
+                    sh &apos;mvn compile sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=Ski-Station Devops -Dsonar.login=16aadcafad9e921cf0c36411e78a98c02a03777a&apos;
+                }
             }
         }
-         /*stage(&apos;Build Docker image&apos;) {
+        stage(&apos;Build Artifact&apos;) {
             steps {
-                sh &apos;docker build -t app-container .&apos;
-               
-                
+                sh &apos;mvn package -DskipTests&apos;
             }
-        }*/
-        
-        stage(&apos;SonarCloud analysis&apos;) {
+        }
+        stage(&apos;deploy Artifact&apos;) {
             steps {
-                // Analyse du code avec SonarCloud
-                
-                        sh &apos;mvn verify sonar:sonar -Dsonar.organization=ski-station-devops -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=16aadcafad9e921cf0c36411e78a98c02a03777a&apos;
+                sh &apos;mvn deploy -DskipTests&apos; 
+            }
+        }
+        stage(&apos;Build Docker image&apos;) {
+            steps {
+                script {
+                    sh &apos;docker build -t app-container .&apos;
                 }
-                
             }
+        }
+        stage(&apos;Run Docker image&apos;) {
+            steps {
+                script {
+                    sh &apos;docker-compose up -d&apos;
+                }
+            }
+        }
     }
-    }
-
- 
-
-
-</script>
+    post {
+        always {
+            cleanWs()
+        }
+    }}</script>
     <loadedScripts class="linked-hash-map"/>
     <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>321831952</long>
+        <long>277577404</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>106361850</long>
+        <long>140724701</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>672801778</long>
+        <long>796163411</long>
       </entry>
       <entry>
         <string>parse</string>
-        <long>17258631</long>
+        <long>29836600</long>
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>109251912</long>
+        <long>151938304</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set">
+      <string>hudson.model.Result.fromString</string>
       <string>org.jenkinsci.plugins.pipeline.StageStatus.TAG_NAME</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.SyntheticStageNames.postBuild</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.createStepsBlock</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.getRestartedStage</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.logToTaskListener</string>
@@ -243,6 +347,10 @@
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Agent.hasAgent</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Agent.populateMap</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Agent.rawClosure</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.BuildCondition.getCombinedResult</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.BuildCondition.orderedConditionNames</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.PostBuild.&lt;init&gt;</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.PostBuild.closureForSatisfiedCondition</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.&lt;init&gt;</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.agent</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.astUUID</string>
@@ -278,11 +386,14 @@
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.StepsBlock.closure</string>
       <string>org.jenkinsci.plugins.workflow.cps.persistence.IteratorHack$Itr.hasNext</string>
       <string>org.jenkinsci.plugins.workflow.cps.persistence.IteratorHack$Itr.next</string>
+      <string>org.jenkinsci.plugins.workflow.job.WorkflowRun.result</string>
+      <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.currentResult</string>
+      <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.rawBuild</string>
       <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.result</string>
     </internalCalls>
     <sandbox>true</sandbox>
-    <iota>21</iota>
-    <head>1:21</head>
+    <iota>38</iota>
+    <head>1:38</head>
     <done>true</done>
     <resumeBlocked>false</resumeBlocked>
     <storageDir>workflow-completed</storageDir>

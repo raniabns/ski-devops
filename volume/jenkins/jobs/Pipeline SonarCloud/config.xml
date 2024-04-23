@@ -13,8 +13,9 @@
   <keepDependencies>false</keepDependencies>
   <properties/>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@3883.vb_3ff2a_e3eea_f">
-    <script>pipeline {
-   agent {label &apos;agent1&apos;}
+    <script>
+pipeline {
+    agent { label &apos;agent1&apos; }
     stages {
         stage(&apos;CHECKOUT&apos;) {
             steps {
@@ -24,37 +25,44 @@
                     //credentialsId: &quot;git-jenkins-credentials&quot;; 
             }
         }
-        
-         stage(&apos;Build Artifact&apos;) {
+       stage(&apos;SonarQube analysis&apos;) {
             steps {
-                sh &apos;mvn package -DskipTests&apos;
-               
-                
+                script {
+		   sh &apos;mvn clean&apos;
+                    sh &apos;mvn compile sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=Ski-Station Devops -Dsonar.projectKey=deployskiStation -Dsonar.login=16aadcafad9e921cf0c36411e78a98c02a03777a&apos;
+                }
             }
         }
-         /*stage(&apos;Build Docker image&apos;) {
+        stage(&apos;Build Artifact&apos;) {
             steps {
-                sh &apos;docker build -t app-container .&apos;
-               
-                
+                sh &apos;mvn package -DskipTests&apos;
             }
-        }*/
-        
-        stage(&apos;SonarCloud analysis&apos;) {
+        }
+        stage(&apos;deploy Artifact&apos;) {
             steps {
-                // Analyse du code avec SonarCloud
-                
-                        sh &apos;mvn verify sonar:sonar -Dsonar.organization=ski-station-devops -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=16aadcafad9e921cf0c36411e78a98c02a03777a&apos;
+                sh &apos;mvn deploy -DskipTests&apos; 
+            }
+        }
+        stage(&apos;Build Docker image&apos;) {
+            steps {
+                script {
+                    sh &apos;docker build -t app-container .&apos;
                 }
-                
             }
+        }
+        stage(&apos;Run Docker image&apos;) {
+            steps {
+                script {
+                    sh &apos;docker-compose up -d&apos;
+                }
+            }
+        }
     }
-    }
-
- 
-
-
-</script>
+    post {
+        always {
+            cleanWs()
+        }
+    }}</script>
     <sandbox>true</sandbox>
   </definition>
   <triggers/>
