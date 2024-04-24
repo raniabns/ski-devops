@@ -1,0 +1,26 @@
+Started by user [8mha:////4DeUdCpvpLcfkZbAU+4jgQZlJBw8zZ/JIhBj+az40K1UAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+[8mha:////4Kou5wsWTybgym1HVi0QECU4DpjM6olxBFW6tzY9xRCvAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4I7aysPGg5oY+7NBxC85d+Km2x67p67zRIUO8q9gb/w/AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Aborted by [8mha:////4DeUdCpvpLcfkZbAU+4jgQZlJBw8zZ/JIhBj+az40K1UAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+[8mha:////4P6qyZT4nWLfvwR80u4/PYi7api3xMYCaHL94kF2r1xNAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbaGesbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzDEWYIfa/QfNmvKfvAAAAA==[0m[Pipeline] // node
+[8mha:////4EUnTur3XrRlwHXTUIeF8+qK4jCjCIwOy4+wB8wTuO/0AAAAph+LCAAAAAAAAP9tjUEKwjAURH8qXbh16SFSEFyJK7chG08QkxjThv/bJLVdeSKv5h2MFlw5MDAzMLznC+oU4UjR8dZi5zFpz/swupL4RLG7Bpp4SxeuCRMFy6WdJBl7WqqkbGERq2AlYG1RB0oeXYaNaNVdNUGha845lu0goPJmgAcwUchZxfwtc4TtbTSJ8Mf5C4C5z8B2xfvPr34Dc4dAdcAAAAA=[0m[Pipeline] stage
+[8mha:////4O01ZJYAUMGIUkyd2lDk73BJ8HCf2bU8nzsKsV3YPVEzAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Post Actions)
+[8mha:////4NUebKdf3pIjTbNsK8OKH7QnLyjk2QZe3iiC835nCJd/AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] cleanWs
+Error when executing always post condition:
+Also:   org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: b988387d-cb8e-4d93-913d-d370f2f1b31e
+org.jenkinsci.plugins.workflow.steps.MissingContextVariableException: Required context class hudson.FilePath is missing
+Perhaps you forgot to surround the step with a step that provides this, such as: node
+	at org.jenkinsci.plugins.workflow.steps.CoreStep$Execution.run(CoreStep.java:90)
+	at org.jenkinsci.plugins.workflow.steps.CoreStep$Execution.run(CoreStep.java:71)
+	at org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+[8mha:////4P4SMJ1uK6ejBPqM9u1XKcDPD52A8+bdM4SceFlZTInIAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4BHqihgD2FkiyLCO8Wi4Yv1aGCQugDaEuzwlOlDg2JDqAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4DJF3Oi8tcrihjwBGJoXlBGE3N647e4wp164nuw8msm0AAAAoh+LCAAAAAAAAP9tjTESgjAQRT84FraWHiKorWNlm6HxBBFiDGR2MVmEyhN5Ne8gIzNW/uq/17zXG8sUceToVGOp9ZQqr7rQu+mpgWN7DTyohi+qYkocrCrtUHJtTzOWLBbzshwLjZWlKnDy5ARr3ZiHKYIhV5wlTu6gkfv6jicyPZXFRPnCGLG59XVi+nX+BjB2nSDfbQXZ/gOwjiY7vQAAAA==[0m[Pipeline] End of Pipeline
+org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: edf981c0-2892-465c-ae12-1541ae117af5
+Finished: ABORTED

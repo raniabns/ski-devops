@@ -1,0 +1,55 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1400.v7fd111b_ec82f">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@2.2198.v41dd8ef6dd56"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@2.2198.v41dd8ef6dd56">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@3894.vd0f0248b_a_fc4">
+    <script>pipeline {
+    agent { label &apos;Agent1&apos; }
+    stages {
+        stage(&apos;CHECKOUT&apos;) {
+            steps {
+               echo &quot;Getting Project from Git&quot;; 
+                git branch: &quot;main&quot;, 
+                    url: &quot;https://github.com/raniabns/ski-devops.git&quot;
+                    //credentialsId: &quot;git-jenkins-credentials&quot;; 
+            }
+        }
+       stage(&apos;SonarQube analysis&apos;) {
+            steps {
+		   sh &apos;mvn sonar:sonar&apos;
+            }
+        environment {
+            SONAR_TOKEN = &apos;sqa_575a9727d8d933d27bf486488c45e0da82ed47a7&apos;
+            SONAR_HOST_URL = &apos;http://localhost:9000&apos;
+                }
+            }
+        stage(&apos;Build Artifact&apos;) {
+            steps {
+                sh &apos;mvn package -DskipTests&apos;
+               
+                
+            }
+         }
+    }    
+    post {
+        always {
+            cleanWs()
+        }
+    }
+        
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

@@ -1,0 +1,14 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2024-04-23 23:38:24.612 UTC</timestamp>
+  <md5sum>e08c0d9c4a4f49bc0cdcf6efc50da53c</md5sum>
+  <fileName>Credential id=VmCredentials_agent name=VmCredentials_agent</fileName>
+  <usages/>
+  <facets>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@1337.v60b_d7b_c7b_c9f">
+      <timestamp>1713997370700</timestamp>
+      <nodeName>Agent1</nodeName>
+      <timestamp0>1713988150728</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+  </facets>
+</fingerprint>
