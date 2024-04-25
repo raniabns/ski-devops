@@ -10,3 +10,15 @@ Offering SkiStationApplication to Project Build Discarder
 Processing Sonaqube
 Offering Sonaqube to Project Build Discarder
 Finished at Thu Apr 25 21:48:04 UTC 2024. 181ms
+Started at Thu Apr 25 22:48:04 UTC 2024
+Processing Pipeline avec agent
+Offering Pipeline avec agent to Project Build Discarder
+Processing Pipeline sans agent
+Offering Pipeline sans agent to Project Build Discarder
+Processing Pipeline SonarCloud
+Offering Pipeline SonarCloud to Project Build Discarder
+Processing SkiStationApplication
+Offering SkiStationApplication to Project Build Discarder
+Processing Sonaqube
+Offering Sonaqube to Project Build Discarder
+Finished at Thu Apr 25 22:48:04 UTC 2024. 3ms
