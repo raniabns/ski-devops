@@ -15,7 +15,7 @@
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@3894.vd0f0248b_a_fc4">
     <script>pipeline {
     agent {label &apos;Agent1&apos;}
-
+ 
     stages {
         stage(&apos;CHECKOUT&apos;) {
             steps {
@@ -28,23 +28,18 @@
          stage(&apos;Build Artifact&apos;) {
             steps {
                 sh &apos;mvn package -DskipTests&apos;
-               
-                
+
             }
          }
-
-        stage(&apos;Run Docker image&apos;) {
+         stage(&apos;Run Docker image&apos;) {
             steps {
                 script {
                     sh &apos;docker-compose up -d&apos;
                 }
             }
         }
-    
     }
-        
-    }
-</script>
+    }</script>
     <sandbox>true</sandbox>
   </definition>
   <triggers/>

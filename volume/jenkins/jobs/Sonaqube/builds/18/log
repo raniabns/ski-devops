@@ -1,0 +1,88 @@
+Started by user [8mha:////4DeUdCpvpLcfkZbAU+4jgQZlJBw8zZ/JIhBj+az40K1UAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+[8mha:////4Kou5wsWTybgym1HVi0QECU4DpjM6olxBFW6tzY9xRCvAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4I7aysPGg5oY+7NBxC85d+Km2x67p67zRIUO8q9gb/w/AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4G50wSqukNMQK6/ztmF9jgv6Hh0+K+vXWmqgRFMwasbKAAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgZB/eT83ILSktQifcf01LwSQ30AEuiDlsYAAAA=[0mAgent1 in /home/jenkins/agent1/workspace/Sonaqube
+[8mha:////4Ne9GIBWjQ8/D0tN24MQjLbRl8fVKxMzUWuHnhnVLxshAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4EtQ5i1RNsmObhak1B4YIkpnWYgnosKdYn9h1mWQ2Dj0AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4O01ZJYAUMGIUkyd2lDk73BJ8HCf2bU8nzsKsV3YPVEzAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (CHECKOUT)
+[8mha:////4NUebKdf3pIjTbNsK8OKH7QnLyjk2QZe3iiC835nCJd/AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] echo
+Getting Project from Git
+[8mha:////4Fn7k7ec4cyD2o4W4Qd54EV9IdGzbn029NP5Wtk4GKs6AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI4F2L72ED8v8DEJvAAAAA==[0m[Pipeline] git
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/raniabns/ski-devops.git
+ > git init /home/jenkins/agent1/workspace/Sonaqube # timeout=10
+Fetching upstream changes from https://github.com/raniabns/ski-devops.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/raniabns/ski-devops.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ERROR: Error cloning remote repo 'origin'
+hudson.plugins.git.GitException: Command "git fetch --tags --force --progress -- https://github.com/raniabns/ski-devops.git +refs/heads/*:refs/remotes/origin/*" returned status code 128:
+stdout: 
+stderr: remote: Enumerating objects: 4077, done.        
+remote: Counting objects:  33% (1/3)        remote: Counting objects:  66% (2/3)        remote: Counting objects: 100% (3/3)        remote: Counting objects: 100% (3/3), done.        
+remote: Compressing objects:  33% (1/3)        remote: Compressing objects:  66% (2/3)        remote: Compressing objects: 100% (3/3)        remote: Compressing objects: 100% (3/3), done.        
+Receiving objects:   0% (1/4077)Receiving objects:   1% (41/4077)Receiving objects:   2% (82/4077)Receiving objects:   3% (123/4077)Receiving objects:   4% (164/4077)Receiving objects:   5% (204/4077), 308.01 KiB | 604.00 KiB/sReceiving objects:   5% (222/4077), 644.01 KiB | 633.00 KiB/sReceiving objects:   5% (224/4077), 1.36 MiB | 689.00 KiB/s  Receiving objects:   5% (224/4077), 2.00 MiB | 674.00 KiB/sReceiving objects:   5% (224/4077), 2.39 MiB | 604.00 KiB/sReceiving objects:   5% (244/4077), 2.97 MiB | 602.00 KiB/sReceiving objects:   5% (244/4077), 3.33 MiB | 500.00 KiB/sReceiving objects:   6% (245/4077), 3.33 MiB | 500.00 KiB/sReceiving objects:   6% (246/4077), 3.58 MiB | 398.00 KiB/sReceiving objects:   6% (246/4077), 3.75 MiB | 316.00 KiB/sReceiving objects:   6% (247/4077), 3.95 MiB | 270.00 KiB/sReceiving objects:   6% (248/4077), 4.13 MiB | 238.00 KiB/sReceiving objects:   6% (268/4077), 4.61 MiB | 278.00 KiB/sReceiving objects:   6% (276/4077), 5.26 MiB | 366.00 KiB/sReceiving objects:   7% (286/4077), 5.26 MiB | 366.00 KiB/sReceiving objects:   7% (316/4077), 5.96 MiB | 492.00 KiB/sReceiving objects:   8% (327/4077), 5.96 MiB | 492.00 KiB/sReceiving objects:   8% (334/4077), 6.72 MiB | 623.00 KiB/sReceiving objects:   8% (334/4077), 7.47 MiB | 701.00 KiB/sReceiving objects:   8% (334/4077), 8.31 MiB | 745.00 KiB/sReceiving objects:   8% (334/4077), 9.06 MiB | 751.00 KiB/sReceiving objects:   8% (334/4077), 9.74 MiB | 746.00 KiB/sReceiving objects:   8% (334/4077), 10.27 MiB | 672.00 KiB/sReceiving objects:   8% (334/4077), 10.50 MiB | 553.00 KiB/sReceiving objects:   8% (334/4077), 10.58 MiB | 453.00 KiB/sReceiving objects:   8% (334/4077), 10.76 MiB | 336.00 KiB/sReceiving objects:   8% (334/4077), 11.10 MiB | 266.00 KiB/sReceiving objects:   8% (334/4077), 11.61 MiB | 272.00 KiB/sReceiving objects:   8% (334/4077), 12.28 MiB | 382.00 KiB/sReceiving objects:   8% (334/4077), 12.97 MiB | 510.00 KiB/sReceiving objects:   8% (334/4077), 13.71 MiB | 628.00 KiB/sReceiving objects:   8% (334/4077), 14.46 MiB | 707.00 KiB/sReceiving objects:   8% (347/4077), 14.84 MiB | 728.00 KiB/sReceiving objects:   8% (347/4077), 15.59 MiB | 747.00 KiB/sReceiving objects:   8% (348/4077), 16.35 MiB | 722.00 KiB/sReceiving objects:   8% (348/4077), 17.26 MiB | 760.00 KiB/sReceiving objects:   8% (348/4077), 18.00 MiB | 757.00 KiB/sReceiving objects:   8% (348/4077), 18.75 MiB | 757.00 KiB/sReceiving objects:   8% (348/4077), 19.50 MiB | 769.00 KiB/sReceiving objects:   8% (348/4077), 20.25 MiB | 755.00 KiB/sReceiving objects:   8% (348/4077), 20.91 MiB | 734.00 KiB/sReceiving objects:   8% (348/4077), 21.39 MiB | 676.00 KiB/sReceiving objects:   8% (348/4077), 21.92 MiB | 620.00 KiB/sReceiving objects:   8% (348/4077), 22.47 MiB | 577.00 KiB/sReceiving objects:   8% (349/4077), 23.04 MiB | 540.00 KiB/sReceiving objects:   8% (350/4077), 23.26 MiB | 509.00 KiB/sReceiving objects:   8% (361/4077), 23.60 MiB | 455.00 KiB/sReceiving objects:   8% (362/4077), 23.71 MiB | 427.00 KiB/sReceiving objects:   9% (367/4077), 23.94 MiB | 361.00 KiB/sReceiving objects:   9% (378/4077), 24.17 MiB | 270.00 KiB/sReceiving objects:   9% (378/4077), 24.29 MiB | 192.00 KiB/sReceiving objects:   9% (378/4077), 24.33 MiB | 162.00 KiB/sReceiving objects:   9% (378/4077), 24.39 MiB | 124.00 KiB/sReceiving objects:   9% (378/4077), 24.57 MiB | 114.00 KiB/sReceiving objects:   9% (378/4077), 24.61 MiB | 107.00 KiB/sReceiving objects:   9% (378/4077), 24.65 MiB | 79.00 KiB/s Receiving objects:   9% (378/4077), 24.69 MiB | 68.00 KiB/sReceiving objects:   9% (379/4077), 24.71 MiB | 71.00 KiB/sReceiving objects:   9% (390/4077), 25.33 MiB | 170.00 KiB/sReceiving objects:  10% (408/4077), 25.33 MiB | 170.00 KiB/sReceiving objects:  10% (445/4077), 26.07 MiB | 308.00 KiB/sReceiving objects:  11% (449/4077), 26.45 MiB | 386.00 KiB/sReceiving objects:  11% (457/4077), 26.82 MiB | 468.00 KiB/sReceiving objects:  11% (472/4077), 27.20 MiB | 558.00 KiB/sReceiving objects:  11% (488/4077), 28.05 MiB | 720.00 KiB/sReceiving objects:  12% (490/4077), 28.05 MiB | 720.00 KiB/sReceiving objects:  13% (531/4077), 28.84 MiB | 759.00 KiB/sReceiving objects:  13% (560/4077), 28.84 MiB | 759.00 KiB/sReceiving objects:  13% (561/4077), 29.96 MiB | 760.00 KiB/sReceiving objects:  13% (561/4077), 30.71 MiB | 758.00 KiB/sReceiving objects:  13% (561/4077), 31.36 MiB | 719.00 KiB/sReceiving objects:  13% (561/4077), 31.69 MiB | 628.00 KiB/sReceiving objects:  13% (561/4077), 32.07 MiB | 547.00 KiB/sReceiving objects:  13% (561/4077), 32.63 MiB | 504.00 KiB/sReceiving objects:  13% (561/4077), 33.32 MiB | 512.00 KiB/sReceiving objects:  13% (561/4077), 34.02 MiB | 552.00 KiB/sReceiving objects:  13% (561/4077), 34.45 MiB | 616.00 KiB/sReceiving objects:  13% (561/4077), 35.20 MiB | 699.00 KiB/sReceiving objects:  13% (561/4077), 35.95 MiB | 743.00 KiB/sReceiving objects:  13% (561/4077), 36.69 MiB | 755.00 KiB/sReceiving objects:  13% (561/4077), 37.46 MiB | 769.00 KiB/serror: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
+error: 932 bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2846)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:2185)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$1.execute(CliGitAPIImpl.java:635)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$2.execute(CliGitAPIImpl.java:871)
+	at org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler$GitCommandMasterToSlaveCallable.call(RemoteGitImpl.java:170)
+	at org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler$GitCommandMasterToSlaveCallable.call(RemoteGitImpl.java:161)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+	at hudson.remoting.Request$2.run(Request.java:377)
+	at hudson.remoting.InterceptingExecutorService.lambda$wrap$0(InterceptingExecutorService.java:78)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+	Suppressed: hudson.remoting.Channel$CallSiteStackTrace: Remote call to Agent1
+		at hudson.remoting.Channel.attachCallSiteStackTrace(Channel.java:1787)
+		at hudson.remoting.UserRequest$ExceptionResponse.retrieve(UserRequest.java:356)
+		at hudson.remoting.Channel.call(Channel.java:1003)
+		at org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler.execute(RemoteGitImpl.java:153)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+		at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+		at org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler.invoke(RemoteGitImpl.java:138)
+		at jdk.proxy43/jdk.proxy43.$Proxy133.execute(Unknown Source)
+		at hudson.plugins.git.GitSCM.retrieveChanges(GitSCM.java:1222)
+		at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1305)
+		at org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:136)
+		at org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:101)
+		at org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:88)
+		at org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+		at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+		at java.base/java.lang.Thread.run(Unknown Source)
+ERROR: Error cloning remote repo 'origin'
+ERROR: Maximum checkout retry attempts reached, aborting
+[8mha:////4MjKAxWbPfXJVnJm047oIx8u4B+Vz/e2JzWdyFhC94pIAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbmRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j/zqggXvAAAAA==[0m[Pipeline] }
+[8mha:////4J06TAynkcD1QDZu+glLY1rH/64Moo95eKoZPSky4t6fAAAAox+LCAAAAAAAAP9tjTESgjAQRT84FraWHiJoYeVY2WZoPEGEGAOZXUwWofJEXs07yMiMlb/67zXv9cYyRRw5OtVYaj2lyqsu9G56auDYXgMPquGLqpgSB6tKO5Rc29OMJYvFvCzHQmNlqQqcPDnBWjfmYYpgyBVniZM7aOS+vuOJTE9lMVG+MEZsbn2dmH6dvwGMXSfId1tBtv8AExtCpb0AAAA=[0m[Pipeline] // stage
+[8mha:////4IzEJ7mg6UbeuAjf210PLSGjSVqzjTXrAy0RGRo5Lq9uAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BKWgpeYSjSHSIitZywwtMbIwT6y7YF5KKF/E1/oAhEhVb7ay0mucLqhThQNGJzmLvMbVeDGF0uYmJYn8JNImOzqIlTBSsUHZSZOxxQUVsYUlRwkrC2mIbKHl0DBvZ6buug0ZXnzjmbS+h9OYGDyhkNrOO/IU5wvY6mkT48/wVwDwwFDuGsmk+x+oNEzd2msEAAAA=[0m[Pipeline] stage
+[8mha:////4DmjXW7BVtlGC6HgWlhAeIxpmIezkE8uGjEJvYxLG7iwAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] { (SonarQube analysis)
+Stage "SonarQube analysis" skipped due to earlier failure(s)
+[8mha:////4F0o+LOkSZINZXnbFl1m8Tni1qf3hYgAe03HQx3FlAcMAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioERUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFDud19ah/eeSmYHb4AAAA=[0m[Pipeline] getContext
+[8mha:////4GPo1B3Ryt+yIZdGwIlzsam1UBcidfXN64mHQdgWbo28AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiEB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7ndf2r3BoOEdWO+AAAA[0m[Pipeline] }
+[8mha:////4Bca8fSStFfNwCR/yqyFcgFcXGh9BNvKFWHts9cO8iDuAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggyKawcK1uGxhNggghh/idAJJUn8mreQTQzVm6xs2+b93zBOgY4UtDMKhwMxs4w7yZdFssUhqujzCxdWEcYySkmVBbUq9OCgpKCJVUNKw4bhZ2jaFAn2HIr77JxEnVzTqF8Bw616Ud4QMWLOcmQvjAH2N2mPhL+PH8FMHufoG73n2rfnAYgMb4AAAA=[0m[Pipeline] // stage
+[8mha:////4KBojXtxRqZ4wYjRBt1TsaUEm21gxeRqD2W2jYMtt56VAAAApx+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjJESDqGgtN7zAxMY4se6CfSGpeBFf4w8EIlGx1c5Kq3m+oMwJDpS8bBy2AXMdZBd7PzU5UGovkQbZ0FnWhJmik9oNmqw7zqiJHcwRBSwULB3WkXJAz7BSjbmbKhr01YnTtO0VFMHe4AFCTWY2ib8wJlhfe5sJf56/Ahg7BrFlKDa7z7F8A6sHc4fBAAAA[0m[Pipeline] stage
+[8mha:////4JVIfoO2xAGjWDrtLWvfE+FvPtptKITNIiFv7msnZ61sAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohULDAgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD1+IXOLCAAAA[0m[Pipeline] { (Build Artifact)
+Stage "Build Artifact" skipped due to earlier failure(s)
+[8mha:////4B6EdIMs2AeAGUIrJgmu372gRNcH3Q4Nq4zJVwMOEHncAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKpAQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHNxXfVKy+AAAA[0m[Pipeline] getContext
+[8mha:////4EtIIZktuvafPlCC85CLVIDprAU8i4VAkAAJA63Xz5BYAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKoQQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N9Jjga++AAAA[0m[Pipeline] }
+[8mha:////4IsqA/Kxb9gDiixOZi4NohLZ2XWLoA5ROhtSxwCLZOo+AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICFDQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Ntfu8AERGGHOvgAAAA==[0m[Pipeline] // stage
+[8mha:////4GnINXFlDU8J6budm1mxkCUvMXJa3x9rmOoVuvHy/GcfAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRiA5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYu06Q77aCbP8Bm3Cxab0AAAA=[0m[Pipeline] }
+[8mha:////4F3698A1LRftQXfiKA+CkwHV5G1uFTRTJnRJPk7uMEfqAAAAoh+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IkOBon14bFL6hQa6F5D9uHMPlF/pr/IJHEyTvdc5bzemOdIo4cnWotdZ5S7VUfBjc/NXLsroFH1fJF1UyJg1WVHStu7GnBisViWZZjpbGxVAdOnpxgq1vzMEUw5IqzxNkdNHLf3PFEpueymChfmCJ2t6FJTL/O3wCmvhfkZSnI9h/on3WwvQAAAA==[0m[Pipeline] // node
+[8mha:////4AF7cl3A4e3gsKxs/yjJWkhXdAQkIUWtRGJbTSYhSIV4AAAAoh+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IkOBon14bFL6hQa6F5D9uHMPlF/pr/IJHEyTvdc5bzemOdIo4cnWotdZ5S7VUfBjc/NXLsroFH1fJF1UyJg1WVHStu7GnBisViWZZjpbGxVAdOnpxgq1vzMEUw5IqzxNkdNHLf3PFEpueymChfmCJ2t6FJTL/O3wCmvhfk5V6QlR/OhhL6vQAAAA==[0m[Pipeline] End of Pipeline
+ERROR: Error cloning remote repo 'origin'
+Finished: FAILURE

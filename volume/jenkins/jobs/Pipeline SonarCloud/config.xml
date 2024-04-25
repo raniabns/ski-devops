@@ -50,13 +50,13 @@ pipeline {
                 }
             }
         }
-        stage(&apos;Run Docker image&apos;) {
+        /*stage(&apos;Run Docker image&apos;) {
             steps {
                 script {
                     sh &apos;docker-compose up -d&apos;
                 }
             }
-        }
+        }*/
     }
     post {
         always {

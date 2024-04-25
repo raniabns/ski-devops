@@ -26,7 +26,7 @@
         }
        stage(&apos;SonarQube analysis&apos;) {
             steps {
-		   sh &apos;mvn sonar:sonar&apos;
+		   sh &apos;mvn compile sonar:sonar&apos;
             }
         environment {
             SONAR_TOKEN = &apos;sqa_575a9727d8d933d27bf486488c45e0da82ed47a7&apos;
@@ -41,12 +41,6 @@
             }
          }
     }    
-    post {
-        always {
-            cleanWs()
-        }
-    }
-        
 }</script>
     <sandbox>true</sandbox>
   </definition>

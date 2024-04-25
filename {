@@ -1,0 +1,163 @@
+Script started on 2024-04-25 01:22:57+01:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="135" LINES="40"]
+		   sh 'mvn clean'
+                    sh 'mvn compile sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=Ski-Station Devops -Dsonar.projectKey=deployskiStation -Dsonar.login=16aadcafad9e921cf0c36411e78a98c02a03777a'
+                }
+            }
+        }
+        stage('Build Artifact') {
+            steps {
+                sh 'mvn package -DskipTests'
+            }
+        }
+        stage('deploy Artifact') {
+            steps {
+                sh 'mvn deploy -DskipTests' 
+            }
+        }
+        stage('Build Docker image') {
+            steps {
+                script {
+                    sh 'docker build -t app-container .'
+                }
+            }
+        }
+        /*stage('Run Docker image') {
+            steps {
+                script {
+                    sh 'docker-compose up -d'
+                }
+            }
+        }*/
+    }
+    post {
+        always {
+            cleanWs()
+        }
+    }}[?2004h]0;root@DESKTOP-JP3TE66: /home/rania/ski-devopsroot@DESKTOP-JP3TE66:/home/rania/ski-devops# 
+Display all 1150 possibilities? (y or n)
+!                                            mkfs.cramfs
+./                                           mkfs.ext2
+:                                            mkfs.ext3
+NF                                           mkfs.ext4
+[                                            mkfs.fat
+[[                                           mkfs.minix
+]]                                           mkfs.msdos
+aa-enabled                                   mkfs.ntfs
+aa-exec                                      mkfs.vfat
+aa-features-abi                              mkhomedir_helper
+aa-remove-unknown                            mklost+found
+aa-status                                    mknod
+aa-teardown                                  mkntfs
+accessdb                                     mksquashfs
+add-apt-repository                           mkswap
+add-shell                                    mktemp
+addgnupghome                                 modinfo
+addgroup                                     modprobe
+addpart                                      more
+addr2line                                    mount
+adduser                                      mount.drvfs
+agetty                                       mount.fuse
+alias                                        mount.fuse3
+apparmor_parser                              mount.lowntfs-3g
+apparmor_status                              mount.ntfs
+applygnupgdefaults                           mount.ntfs-3g
+apport-bug                                   mountpoint
+apport-cli                                   mt
+apport-collect                               mt-gnu
+apport-unpack                                mtr
+apropos                                      mtr-packet
+apt                                          mv
+apt-add-repository                           mvn
+apt-cache                                    mvnDebug
+apt-cdrom                                    namei
+apt-config                                   nano
+apt-extracttemplates                         nawk
+apt-ftparchive                               nc
+apt-get                                      nc.openbsd
+--More--[Kapt-key                                      neqn
+apt-mark                                     netcat
+apt-sortpkgs                                 netplan
+ar                                           networkctl
+arch                                         networkd-dispatcher
+arpd                                         newgrp
+arptables                                    newusers
+arptables-nft                                nfnl_osf
+arptables-nft-restore                        nft
+arptables-nft-save                           ngettext
+arptables-restore                            nice
+arptables-save                               nisdomainname
+as                                           nl
+awk                                          nm
+b2sum                                        nohup
+badblocks                                    nologin
+base32                                       nproc
+base64                                       nroff
+basename                                     nsenter
+basenc                                       nslookup
+bash                                         nstat
+bashbug                                      nsupdate
+bg                                           ntfs-3g
+bind                                         ntfs-3g.probe
+biosdecode                                   ntfscat
+blkdeactivate                                ntfsclone
+blkdiscard                                   ntfscluster
+blkid                                        ntfscmp
+blkzone                                      ntfscp
+blockdev                                     ntfsdecrypt
+bootctl                                      ntfsfallocate
+break                                        ntfsfix
+bridge                                       ntfsinfo
+builtin                                      ntfslabel
+busctl                                       ntfsls
+busybox                                      ntfsmove
+byobu                                        ntfsrecover
+byobu-config                                 ntfsresize
+byobu-ctrl-a                                 ntfssecaudit
+--More--[Kbyobu-disable                                ntfstruncate
+byobu-disable-prompt                         ntfsundelete
+byobu-enable                                 ntfsusermap
+byobu-enable-prompt                          ntfswipe
+byobu-export                                 numfmt
+byobu-janitor                                objcopy
+byobu-keybindings                            objdump
+byobu-launch                                 od
+byobu-launcher                               oem-getlogs
+byobu-launcher-install                       on_ac_power
+byobu-launcher-uninstall                     openssl
+byobu-layout                                 openvt
+byobu-prompt                                 ownership
+byobu-quiet                                  pack200
+byobu-reconnect-sockets                      pager
+byobu-screen                                 pam-auth-update
+byobu-select-backend                         pam_extrausers_chkpwd
+byobu-select-profile                         pam_extrausers_update
+byobu-select-session                         pam_getenv
+byobu-shell                                  pam_timestamp_check
+byobu-silent                                 parted
+byobu-status                                 partprobe
+byobu-status-detail                          partx
+byobu-tmux                                   passwd
+byobu-ugraph                                 paste
+byobu-ulevel                                 pastebinit
+c++filt                                      patch
+c_rehash                                     pathchk
+caller                                       pbget
+capsh                                        pbput
+captoinfo                                    pbputs
+case                                         pdb3
+cat                                          pdb3.10
+catman                                       peekfd
+cd                                           perl
+chage                                        perl5.34-x86_64-linux-gnu
+chattr                                       perl5.34.0
+chcon                                        perlbug
+chcpu                                        perldoc
+--More--[Kchfn                                         perlivp
+chgpasswd                                    perlthanks
+chgrp                                        pgrep
+chmem                                        pic
+chmod                                        pico
+choom                                        piconv
+chown                                        pidof
+chpasswd                                     pidwait
+chroot                
