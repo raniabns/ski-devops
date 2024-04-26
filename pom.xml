@@ -83,14 +83,13 @@
             <version>0.8.7</version>
             <executions>
                 <execution>
-                    <id>prepare-agent</id>
                     <goals>
                         <goal>prepare-agent</goal>
                     </goals>
                 </execution>
                 <execution>
                     <id>report</id>
-                    <phase>test</phase>
+                    <phase>prepare-package</phase>
                     <goals>
                         <goal>report</goal>
                     </goals>
@@ -99,4 +98,26 @@
         </plugin>
         </plugins>
     </build>
+    <profiles>
+    <profile>
+            <id>prod</id>
+            <properties>
+                <env>src/main/resources/prod</env>
+                <maven.test.skip>true</maven.test.skip>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <env>src/main/resources/test</env>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>com.h2database</groupId>
+                    <artifactId>h2</artifactId>
+                    <scope>runtime</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
 </project>
