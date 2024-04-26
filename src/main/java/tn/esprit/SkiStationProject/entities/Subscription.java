@@ -27,11 +27,5 @@ public class Subscription extends BaseEntity {
 	Float price;
     @Enumerated(EnumType.STRING)
 	TypeSubscription typeSub;
-public Subscription(LocalDate startDate,LocalDate endDate, Float price, TypeSubscription typeSub) {
-	this.startDate =startDate;
-        this.endDate = endDate;
-        this. price =  price;
-        this.typeSub = typeSub;
-    }
 
 }
