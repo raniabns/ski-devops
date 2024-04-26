@@ -1,34 +1,34 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.mockito.junit.jupiter.MockitoExtension; // Assurez-vous que cette importation est présente
+import org.mockito.MockitoAnnotations;
+import tn.esprit.SkiStationProject.entities.Course;
+import tn.esprit.SkiStationProject.entities.enums.TypeCourse;
+import tn.esprit.SkiStationProject.entities.enums.Support;
+import tn.esprit.SkiStationProject.repositories.CourseRepository;
+import tn.esprit.SkiStationProject.services.CourseServicesImpl;
 
-import tn.esprit.SkiStationProject.entities.Skier;
-import tn.esprit.SkiStationProject.entities.Subscription;
-import tn.esprit.SkiStationProject.entities.enums.TypeSubscription;
-import tn.esprit.SkiStationProject.repositories.SkierRepository;
-import tn.esprit.SkiStationProject.repositories.SubscriptionRepository;
-import tn.esprit.SkiStationProject.services.SubscriptionServicesImpl;
-import java.time.LocalDate;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 import static org.mockito.Mockito.*;
-import org.springframework.boot.test.context.SpringBootTest;
-import tn.esprit.SkiStationProject.SkiStationProjectApplication;
-
-@SpringBootTest(classes=SkiStationProjectApplication.class)
 public class SkiStationProjectApplicationTests {
 
-    @Autowired
+    @Mock
     private SubscriptionRepository subscriptionRepository;
 
-    @Autowired
+    @InjectMocks
     private SubscriptionServicesImpl subscriptionServices;
 
     @Mock
     private SkierRepository skierRepository;
+    @BeforeEach
+    public void setup() {
+        MockitoAnnotations.openMocks(this);
+    }
 
     @Test
     void contextLoads() {
